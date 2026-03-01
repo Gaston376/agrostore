@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroStore - Quality Agricultural Products</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="AgroStore Logo" onerror="this.style.display='none'">
+                <h1>🌾 AgroStore</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Quality Agricultural Products</h2>
+                <p>Fresh from farm to your doorstep</p>
+                <button class="btn-primary" onclick="scrollToProducts()">Shop Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2>Our Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-icon">🌽</div>
+                    <h3>Seeds</h3>
+                    <p>High-quality seeds for various crops</p>
+                    <span class="price">From UGX 5,000</span>
+                    <button class="btn-secondary" onclick="addToCart('Seeds')">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">🧪</div>
+                    <h3>Fertilizers</h3>
+                    <p>Organic and chemical fertilizers</p>
+                    <span class="price">From UGX 25,000</span>
+                    <button class="btn-secondary" onclick="addToCart('Fertilizers')">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">🚜</div>
+                    <h3>Farm Tools</h3>
+                    <p>Essential farming equipment</p>
+                    <span class="price">From UGX 15,000</span>
+                    <button class="btn-secondary" onclick="addToCart('Farm Tools')">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">💧</div>
+                    <h3>Irrigation</h3>
+                    <p>Water management systems</p>
+                    <span class="price">From UGX 50,000</span>
+                    <button class="btn-secondary" onclick="addToCart('Irrigation')">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">🐄</div>
+                    <h3>Animal Feed</h3>
+                    <p>Nutritious feed for livestock</p>
+                    <span class="price">From UGX 30,000</span>
+                    <button class="btn-secondary" onclick="addToCart('Animal Feed')">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">🌱</div>
+                    <h3>Pesticides</h3>
+                    <p>Safe and effective pest control</p>
+                    <span class="price">From UGX 20,000</span>
+                    <button class="btn-secondary" onclick="addToCart('Pesticides')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About AgroStore</h2>
+            <div class="about-content">
+                <p>AgroStore is your trusted partner in agriculture. We provide high-quality agricultural products to farmers across Uganda.</p>
+                <div class="features">
+                    <div class="feature">
+                        <span class="feature-icon">✓</span>
+                        <h3>Quality Products</h3>
+                        <p>Only the best for your farm</p>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-icon">✓</span>
+                        <h3>Affordable Prices</h3>
+                        <p>Fair pricing for all farmers</p>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-icon">✓</span>
+                        <h3>Fast Delivery</h3>
+                        <p>Quick delivery to your location</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="contact-icon">📞</span>
+                    <p>+256 700 000 000</p>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <p>info@agrostore.ug</p>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📍</span>
+                    <p>Kampala, Uganda</p>
+                </div>
+            </div>
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 AgroStore. All rights reserved.</p>
+            <p>Empowering farmers across Uganda 🌾</p>
+        </div>
+    </footer>
+
+    <!-- Cart Notification -->
+    <div id="cart-notification" class="cart-notification">
+        <span id="notification-text"></span>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
