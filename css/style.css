@@ -77,6 +77,15 @@ nav a:hover {
     text-align: center;
 }
 
+.hero-image {
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    animation: fadeInUp 0.8s;
+}
+
 .hero-content h2 {
     font-size: 3rem;
     margin-bottom: 1rem;
