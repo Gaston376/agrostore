@@ -147,11 +147,39 @@ nav a:hover {
     text-align: center;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
 }
 
 .product-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.product-card.new-product {
+    border: 2px solid #ff9800;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
 }
 
 .product-icon {
